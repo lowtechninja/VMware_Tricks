@@ -2,7 +2,7 @@
 # Release 1
 # Usage: ./Remove-AllSnapshots.ps1
 #
-# Will rename all VM snapshot on vCenter (VCC) and attached ESXi host (VASA,VASB,VASC etc.)
+# Will remove all VM snapshot on vCenter (VCC) and attached ESXi host (VASA,VASB,VASC etc.)
 # The "$vCenterServer" variable must be set to the vCenter/ESXi host that you want to connect to. Best to connet to the vCenter(VCC) host.
 # *** You must connet to ESXi/vCenter Server via Powercli
 # *** Tested with Powercli 13.1.0.21624340

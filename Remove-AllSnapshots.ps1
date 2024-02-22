@@ -26,6 +26,9 @@ Get-VM "*" | Get-Snapshot
 # For each virtual machine remove all the snapshots
 Get-VM "*" | Get-Snapshot | Remove-Snapshot -RunAsync -Confirm:$false
 
+# For each virtual machine dismount CD-ROM 
+Get-VM "*" | Get-CDDrive | Where {$_.ISOPath -ne $null} | Set-CDDrive -NoMedia -Confirm:$false
+
 # Disconnect from vCenter
 $wshell = New-Object -ComObject Wscript.Shell
 $Output = $wshell.Popup("All Snapshot have been removed!")
